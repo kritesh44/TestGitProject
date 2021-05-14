@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class launch {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		
 		System.setProperty("webdriver.chrome.driver","D:\\Eclipse\\chromedriver_win32\\chromedriver.exe");
@@ -15,6 +15,9 @@ public class launch {
 		driver.get("https://www.google.com");
 		driver.findElement(By.className("gb_g")).click();
 		driver.findElement(By.linkText("Create an account")).click();
+		
+		Thread.sleep(6000);
+		driver.close();
 
 	}
 
